@@ -11,4 +11,12 @@
 	<br>
 	<%= f.submit "Submit", :disabel_with => 'Submiting...' %>
 	<% end %>
+	<% if @group.errors.any? %>
+	<ul>
+		<% @group.errors.full_messages.each do|msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+	<% end %>
+
 </div>
