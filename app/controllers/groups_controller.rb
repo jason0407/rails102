@@ -16,4 +16,7 @@ class GroupsController < ApplicationController
 		params.require(:group).permit(:title,:description)
 	end
 
+	def show
+		@group = Group.find(params[:id])
+	end
 end
